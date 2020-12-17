@@ -5,21 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <lin rel="stylesheet" href="../assets/css/style.css"></lin>
+    <link rel="stylesheet" href="../assets/css/style.css"></link>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
+
+    <div class = "animation-area">
+        <ul class = "box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+       
+   
+
     <header id="header">
         <nav>
             <div class="container">
                 <div class="text-center">
-                    <a href="/" class="nav-brand text-dark">User Management System</a>
+                    <a href="/" class="nav-brand text-dark">University Management System</a>
                 </div>
             </div>
         </nav>
     </header>
     <!-- /Header -->
+
+    <!-- Tab -->
+    <div class = "tabs">
+          <div class = "btn-box">
+              <button id="btn1" onclick = "openStudents()"><i class="fas fa-user-graduate"></i> Students </button>
+              <button id="btn2" onclick = "openTeachers()"><i class="fas fa-chalkboard-teacher"></i> Teachers </button>
+              <button id="btn3" onclick = "openCourses()"><i class="fas fa-book"></i> Courses </button>
+          </div> 
+    </div>
+    <script>
+        function openStudents(){
+            btn1.style.color = "#06d6a0"
+            btn2.style.color = "#2b2d42"
+            btn3.style.color = "#2b2d42"
+            btn1.style.borderBottomStyle = "solid"
+            btn2.style.borderBottomStyle = "none"
+            btn3.style.borderBottomStyle = "none"
+            btn1.style.borderBottomWidth = "3px"
+        }
+        function openTeachers(){
+            btn2.style.color = "#06d6a0"
+            btn1.style.color = "#2b2d42"
+            btn3.style.color = "#2b2d42"
+            btn2.style.borderBottomStyle = "solid"
+            btn1.style.borderBottomStyle = "none"
+            btn3.style.borderBottomStyle = "none"
+            btn2.style.borderBottomWidth = "3px"
+        }
+        function openCourses(){
+            btn3.style.color = "#06d6a0"
+            btn2.style.color = "#2b2d42"
+            btn1.style.color = "#2b2d42"
+            btn3.style.borderBottomStyle = "solid"
+            btn2.style.borderBottomStyle = "none"
+            btn1.style.borderBottomStyle = "none"
+            btn3.style.borderBottomWidth = "3px"
+        }
+    </script>
+    <!-- Tab -->
+       
 
     <!-- Main Site -->
     <main id="site-main">
@@ -66,6 +121,6 @@
     </main>
     <!-- /Main Site -->
 
-
+</div> 
 </body>
 </html>
