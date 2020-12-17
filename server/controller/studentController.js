@@ -19,8 +19,8 @@ exports.create = (req, res) => {
     student
     .save(student)
     .then(data => {
-        res.send(data)
-        // res.redirect('/add-user');
+        // res.send(data)
+        res.redirect('/');
     })
     .catch(err =>{
         res.status(500).send({

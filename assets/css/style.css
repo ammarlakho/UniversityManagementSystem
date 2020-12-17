@@ -1,5 +1,3 @@
-/* Comment out   -webkit-text-fill-color: transparent; */
-/* Add .new-user {color: black;} and add class="new-user in html/eejs for span tag"*/
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap'); 
 :root{
@@ -24,6 +22,7 @@ a{
     max-width:1024px;
     margin: auto;
 }
+
 .nav-brand{
     font-size: 1.5em;
     font-weight: bold;
@@ -66,8 +65,8 @@ d-flex{
     /* -webkit-text-fill-color: transparent; */
 }
 
-.new-user{
-    color: black
+.route-link{
+    color: black;
 }
 
 #header nav{
@@ -172,6 +171,7 @@ table{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .box-area li{
