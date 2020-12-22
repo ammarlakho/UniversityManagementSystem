@@ -1,0 +1,38 @@
+<!-- Tab -->
+<div class = "tabs">
+    <div class = "btn-box">
+        
+        <a href="/"><button id="btn1" onclick = "openStudents()"><i class="fas fa-user-graduate"></i> Students </button></a>
+        <a href="/teachers"><button id="btn2" onclick = "openTeachers()"><i class="fas fa-chalkboard-teacher"></i> Teachers </button></a>
+        <a href="/courses"><button id="btn3" onclick = "openCourses()"><i class="fas fa-book"></i> Courses </button></a>
+    </div> 
+</div>
+<script>
+  function openStudents(){
+      btn1.style.color = "#06d6a0"
+      btn2.style.color = "#2b2d42"
+      btn3.style.color = "#2b2d42"
+      btn1.style.borderBottomStyle = "solid"
+      btn2.style.borderBottomStyle = "none"
+      btn3.style.borderBottomStyle = "none"
+      btn1.style.borderBottomWidth = "3px"
+  }
+  function openTeachers(){
+      btn2.style.color = "#06d6a0"
+      btn1.style.color = "#2b2d42"
+      btn3.style.color = "#2b2d42"
+      btn2.style.borderBottomStyle = "solid"
+      btn1.style.borderBottomStyle = "none"
+      btn3.style.borderBottomStyle = "none"
+      btn2.style.borderBottomWidth = "3px"
+  }
+  function openCourses(){
+      btn3.style.color = "#06d6a0"
+      btn2.style.color = "#2b2d42"
+      btn1.style.color = "#2b2d42"
+      btn3.style.borderBottomStyle = "solid"
+      btn2.style.borderBottomStyle = "none"
+      btn1.style.borderBottomStyle = "none"
+      btn3.style.borderBottomWidth = "3px"
+  }
+</script>

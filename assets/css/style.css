@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap'); 
 :root{
     --dark: #2b2d42;
@@ -21,7 +22,9 @@ a{
     max-width:1024px;
     margin: auto;
 }
+
 .nav-brand{
+    color: #2b2d42;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -56,12 +59,16 @@ d-flex{
     color: var(--light);
 }
 
-/*.text-gradient{
+.text-gradient{
     background: linear-gradient(to right #8e2de2, #4a00e0);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-}*/
+     /* -webkit-text-fill-color: transparent; */
+}
+
+.route-link{
+    color: black;
+}
 
 #header nav{
     background-color: #06d6a0;
@@ -153,7 +160,7 @@ table{
 }
 
 .animation-area{
-    background: linear-gradient(to left, #68b497, #5d83bb);
+    background: linear-gradient(to top, #b9b9b9, #ffffff);
     width: 100%;
     height: 100vh;
 }
@@ -164,7 +171,8 @@ table{
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
+    pointer-events: none;
 }
 
 .box-area li{
@@ -238,28 +246,44 @@ table{
 /*add user & update user template*/
 
 .form-title{
+    transform: translate(0px,-80px);
     margin-top: 2em;
+
 }
 
 .form-title > h2{
     padding:.5em 0;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+
 }
 
 .new_user{
-    max-width: 786px;
-    margin:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.text{
+    font-size: 18px;
 }
 
 #update_user .form-group,
 #add_user .form-group{
-    margin:.4em 0;
+    margin: .4em 0;
 }
 
 #update_user .form-group input[type="text"]
 #add_user .form-group input[type="text"]{
-    width:100%;
+    width:220px;
+    height: 30px;
     padding: .6em 1em;
-    margin: .5em 0;
+    margin: 2em 0;
     border: 1px solid var(--border);
     font-family:'Barlow', sans-serif;
     font-size: 1em;
@@ -334,3 +358,4 @@ table{
 }
 
 /*zunaira part*/
+

@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
+const connectDB = require('./server/database/connection');
 
 const app = express();
 
@@ -12,6 +13,9 @@ const PORT = process.env.PORT || 8080
 // log requests
 app.use(morgan('tiny'));
 
+// Mongodb Connection
+connectDB();
+
 //parse request to body-parser
 app.use(bodyparser.urlencoded({extended:true}));
 
@@ -20,14 +24,11 @@ app.set('view engine', 'egs');
 // app.set("views", path.resolve(__dirname, "views/ejs"))
 
 // load assets
-app.use('/css', express.static(path.resolve('__dirname', 'assets/css')))
-app.use('/img', express.static(path.resolve('__dirname', 'assets/img')))
-app.use('/js', express.static(path.resolve('__dirname', 'assets/js')))
-css/style.css
+app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
+app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
-app.get('/', (req, res) => {
-    // res.send('Crudd Application');
-    res.render('index.ejs');
-})
+// load routers
+app.use('/', require('./server/routes/router'))
 
 app.listen(PORT, ()=>{console.log(`Server is running on http://localhost:${PORT}`)});

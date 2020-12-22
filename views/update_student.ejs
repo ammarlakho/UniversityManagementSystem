@@ -1,0 +1,78 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/" class="border-shadow">
+                <span class="text-gradient route-link"><i class="fas fa-angle-double-left"></i> All Users
+                </span>
+            </a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Edit User</h2>
+            <span class="text-light">Use the below form to update details for this account</span>
+        </div>
+
+        <!-- form handling -->
+        <form method="POST" id="update_student">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="<%= student._id %>">
+                    <input type="text" name="name" value="<%= student.name %>">
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="text-light">Email</label>
+                    <input type="text" name="email" value="<%= student.email %>" placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="Batch" class="text-light">Batch</label>
+                    <!-- <input type="text" name="batch" value="<%= student.batch %>" placeholder="2022"> -->
+
+            <select id="batch">
+                <option value="current"> <%= student.batch %></option>
+                <option value="2018"> 2018</option>
+                <option value="2019"> 2019</option>
+                <option value="2020"> 2020</option>
+                <option value="2021"> 2021</option>
+                <option value="2022"> 2022</option>
+                <option value="2023"> 2023</option>
+                <option value="2024"> 2024</option>
+                <option value="2025"> 2025</option>
+                <option value="2026"> 2026</option>
+            </select>
+        </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="Program" class="text-light">Program</label>
+                    <!-- <input type="text" name="program" value="<%= student.program %>" placeholder="BSCS"> -->
+                    <form>
+                        BBA: <input type="radio" name = "status">
+                        BSCS: <input type="radio" name = "status">
+                        BSSS: <input type="radio" name = "status">
+                        BSECO: <input type="radio" name = "status">
+                        BSEM: <input type="radio" name = "status">
+                        BSACF: <input type="radio" name = "status">
+                    </form>
+                </div>
+                
+
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Save</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
