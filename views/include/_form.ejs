@@ -28,17 +28,23 @@
 
         <div class="form-group">
             <label for="Program" class="text">Program</label>
-            <form>
-                BBA: <input type="radio" name = "status">
-                BSCS: <input type="radio" name = "status">
-                BSSS: <input type="radio" name = "status">
-                BSECO: <input type="radio" name = "status">
-                BSEM: <input type="radio" name = "status">
-                BSACF: <input type="radio" name = "status">
-            </form>
+            <div class = radio>                       
+                <input type="radio" id="bba" name = "status">
+                <label for = "bba" id="bba"> BBA</label>
+                <input type="radio" id="bscs" name = "status">
+                <label for = "bscs" id="bscs"> BSCS</label>
+                <input type="radio" id="bsss" name = "status">
+                <label for = "bsss" id="bsss"> bsss</label>
+                <input type="radio" id="bseco" name = "status">
+                <label for = "bseco" id="bseco"> bseco</label>
+                <input type="radio" id="bsem" name = "status">
+                <label for = "bsem" id="bsem" > bsem</label>
+                <input type="radio" id="bsacf" name = "status">
+                <label for = "bsacf" id="bsacf"> bsacf</label>
+            </div>
         </div>
         
-        <div class="form-group">
+        <div class="save3">
             <button type="submit" class="btn text-dark update">Save</button>
         </div>
 
