@@ -273,6 +273,7 @@ table{
     font-size: 18px;
 }
 
+
 #update_user .form-group,
 #add_user .form-group{
     margin: .4em 0;
@@ -295,6 +296,84 @@ table{
 {
     margin: 1em 2em;
 }
+
+
+.designation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,240%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.salary{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,330%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.program{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,250%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.save{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,400%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.save2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,330%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 60px;
+}
+
+.radio{
+    font-size: 16px;
+    text-transform: uppercase;
+    flex-direction: column;
+    display: inline-block;
+}
+
+#bsem{
+    transform: translate(100px,-101px);
+}
+#bsss{
+    transform: translate(100px,-25px);
+}
+
+#bseco{
+    transform: translate(200px,-77px);
+}
+
+#bsacf{
+    transform: translate(200px,-100px);
+}
+
+
 
 /* adding style to radio buttons*/
 .radio input[type='radio']{

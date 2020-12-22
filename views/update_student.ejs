@@ -22,16 +22,16 @@
         <form method="POST" id="update_student">
             <div class="new_user">
                 <div class="form-group">
-                    <label for="name" class="text-light">Name</label>
+                    <label for="name" class="text">Name</label>
                     <input type="hidden" name="id" value="<%= student._id %>">
                     <input type="text" name="name" value="<%= student.name %>">
                 </div>
                 <div class="form-group">
-                    <label for="Email" class="text-light">Email</label>
+                    <label for="Email" class="text">Email</label>
                     <input type="text" name="email" value="<%= student.email %>" placeholder="example@gmail.com">
                 </div>
                 <div class="form-group">
-                    <label for="Batch" class="text-light">Batch</label>
+                    <label for="Batch" class="text">Batch</label>
                     <!-- <input type="text" name="batch" value="<%= student.batch %>" placeholder="2022"> -->
 
             <select id="batch">
@@ -49,21 +49,28 @@
         </div>
 
                 </div>
-                <div class="form-group">
-                    <label for="Program" class="text-light">Program</label>
+                <div class="program">
+                    <label for="Program" class="text">Program</label>
                     <!-- <input type="text" name="program" value="<%= student.program %>" placeholder="BSCS"> -->
-                    <form>
-                        BBA: <input type="radio" name = "status">
-                        BSCS: <input type="radio" name = "status">
-                        BSSS: <input type="radio" name = "status">
-                        BSECO: <input type="radio" name = "status">
-                        BSEM: <input type="radio" name = "status">
-                        BSACF: <input type="radio" name = "status">
-                    </form>
+                    <div class = radio>                       
+                        <input type="radio" id="bba" name = "status">
+                        <label for = "bba" id="bba"> BBA</label>
+                        <input type="radio" id="bscs" name = "status">
+                        <label for = "bscs" id="bscs"> BSCS</label>
+                        <input type="radio" id="bsss" name = "status">
+                        <label for = "bsss" id="bsss"> bsss</label>
+                        <input type="radio" id="bseco" name = "status">
+                        <label for = "bseco" id="bseco"> bseco</label>
+                        <input type="radio" id="bsem" name = "status">
+                        <label for = "bsem" id="bsem" > bsem</label>
+                        <input type="radio" id="bsacf" name = "status">
+                        <label for = "bsacf" id="bsacf"> bsacf</label>
+                    </div>
+                </label>
                 </div>
                 
 
-                <div class="form-group">
+                <div class="save2">
                     <button type="submit" class="btn text-dark update">Save</button>
                 </div>
 
