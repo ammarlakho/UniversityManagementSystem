@@ -17,7 +17,7 @@ var teacherSchema = new mongoose.Schema({
     },
     salary: {
         type: Number
-    }
+    },
 
 })
 

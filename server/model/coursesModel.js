@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
+var teacherSchema = require('./teacherModel');
 
 var courseSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
     },
+    teacher_ref: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Teacher",
+        required: true
+    },
+    
     term: {
         type: String,
         required: true
@@ -13,19 +20,12 @@ var courseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    batch: {
-        type: String,
-        required: true
-    },
-
-    
     studentsEnrolled: [
         {
           type: mongoose.Schema.Types.ObjectId,
           ref: "Student"
         }
     ]
-
 })
 
 const Course = mongoose.model('Course', courseSchema);

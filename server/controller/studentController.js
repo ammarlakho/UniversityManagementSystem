@@ -24,7 +24,7 @@ exports.create = (req, res) => {
     })
     .catch(err =>{
         res.status(500).send({
-            message : err.message || "Some error occurred while creating a create operation"
+            message : err.message || "Some error occurred while doing a create operation"
         });
     });
     
@@ -42,6 +42,7 @@ exports.find = (req, res) => {
             }
             else {
                 res.send(data)
+                console.log('hi')
             }
         })
         .catch(err => {

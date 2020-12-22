@@ -2,6 +2,11 @@
 <%- include('include/_header') %>
 <!-- /include header -->
 
+
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include header -->
+
   <!-- Main Site -->
   <main id="site-main">
     <div class="container">
@@ -57,3 +62,19 @@
 <!-- include footer -->
 <%- include('include/_footer') %>
 <!-- /include footer -->
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn2.style.color = "#06d6a0"
+    btn1.style.color = "#2b2d42"
+    btn3.style.color = "#2b2d42"
+    btn2.style.borderBottomStyle = "solid"
+    btn1.style.borderBottomStyle = "none"
+    btn3.style.borderBottomStyle = "none"
+    btn2.style.borderBottomWidth = "3px"
+    
+</script>
+

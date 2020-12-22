@@ -1,3 +1,4 @@
+const Course = require('../model/coursesModel');
 var Teacher = require('../model/teacherModel');
 
 // create and save new teacher 
@@ -84,21 +85,21 @@ exports.update = (req, res) => {
         })
 }
 
-// delete a teacher by teacher_ID
+// delete a teacher by teacher_ID and delete all the courses he teaches 
 exports.delete = (req, res) => {
     const id = req.params.id;
-    Teacher.findByIdAndRemove(id)
-        .then(data => {
-            if(!data) {
-                res.status(404).send({message: `Cannot delete teacher with ${id}. Maybe user not found!`})
-            }
-            else {
-                res.send({
-                    message: "teacher was deleted successfully"
-                })
-            }
+    Promise.all([
+        Teacher.findByIdAndRemove(id), 
+        Course.find({teacher_ref: id}).deleteMany()
+    ])
+    .then(values => {
+        res.send({
+            message: "Success"
         })
-        .catch(err => {
-            res.status(500).send({message: "Error in  deleting teacher info"})
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Failure"
         })
+    })
 }

@@ -2,20 +2,25 @@
 <%- include('include/_header') %>
 <!-- /include header -->
 
+<!-- include tab -->
+<%- include('include/_tab') %> 
+<!-- /include tab -->
+
+
   <!-- Main Site -->
   <main id="site-main">
     <div class="container">
         <div class="box-nav d-flex justify-between">
            <div class="filter">
                <a href="/" class="border-shadow">
-                <span class="text-gradient route-link"><i class="fas fa-angle-double-left"></i> All Users
+                <span class="text-gradient route-link"><i class="fas fa-angle-double-left"></i> All Students
                 </span>
             </a>
            </div>
         </div>
         <div class="form-title text-center">
-            <h2 class="text-dark">Edit User</h2>
-            <span class="text-light">Use the below form to update details for this account</span>
+            <h2 class="text-dark">Edit Student</h2>
+            <span class="text-light">Use the below form to update details for this student</span>
         </div>
 
         <!-- form handling -->
@@ -53,3 +58,18 @@
 <!-- include footer -->
 <%- include('include/_footer') %>
 <!-- /include footer -->
+
+<script>
+    var btn1 = document.getElementById('studentsBtn');
+    var btn2 = document.getElementById('teachersBtn');
+    var btn3 = document.getElementById('coursesBtn');
+
+    btn1.style.color = "#06d6a0"
+    btn2.style.color = "#2b2d42"
+    btn3.style.color = "#2b2d42"
+    btn1.style.borderBottomStyle = "solid"
+    btn2.style.borderBottomStyle = "none"
+    btn3.style.borderBottomStyle = "none"
+    btn1.style.borderBottomWidth = "3px"
+
+</script>
